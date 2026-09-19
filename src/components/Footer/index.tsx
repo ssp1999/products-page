@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="font-serif font-medium text-gray-900">Glow & Co.</span>
         </div>
         <p className="text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Glow & Co. Protótipo Acadêmico.
+          &copy; {new Date().getFullYear()} Glow & Co. Projeto Acadêmico.
         </p>
       </div>
     </footer>

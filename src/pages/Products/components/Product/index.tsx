@@ -1,15 +1,5 @@
 import { Plus } from "lucide-react"
-
-interface IProduct {
-  id: number
-  image: string
-  name: string
-  description: string
-  isNew?: boolean | null
-  discount?: string | null
-  price: number
-  oldPrice?: number | null
-}
+import type { IProduct } from "../../../../types/product"
 
 interface ProductProps {
   product: IProduct
