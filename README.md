@@ -1,63 +1,129 @@
+
 # ✨ Glow & Co.
 
-Este protótipo de e-commerce de artigos de maquiagem é um <strong className="text-pink-600 font-semibold">projeto acadêmico</strong> desenvolvido para aplicar conceitos de criação de interfaces, componentização e gerenciamento de estado em React. A aplicação apresenta uma interface moderna e responsiva, com consumo de API local e comunicação entre componentes.
+Um protótipo de e-commerce de artigos de maquiagem desenvolvido como **projeto acadêmico**, com foco na aplicação prática de conceitos de desenvolvimento Front-End utilizando React.
+
+A aplicação apresenta uma interface moderna e responsiva, com componentização, gerenciamento de estado, navegação entre páginas e consumo de uma API local para carregamento dinâmico dos produtos.
 
 ---
 
 ## 🎓 Informações Acadêmicas
-- *Aluna:* Shakyra Seli Portes
-- *Disciplina:* Desenvolvimento Front End 2
-- *Projeto:* Glow & Co. App
-- *Objetivo:* Aplicação prática de componentização em React, hooks (useState, useEffect), React Router, consumo de APIs e estilização com Tailwind CSS.
+
+- **Aluna:** Shakyra Seli Portes
+- **Disciplina:** Desenvolvimento Front End 2
+- **Projeto:** Glow & Co. App
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 - *React* (com Vite)
 - *TypeScript* / *JavaScript*
-- *Tailwind CSS* (Estilização "Utility-first")
+- *Tailwind CSS* (Estilização)
 - *React Router DOM* (Navegação SPA)
 - *Mockoon* (Mock de API Local)
 
 ---
 
 ## ⚙️ Pré-requisitos
-Antes de começar, você precisará ter instalado em sua máquina:
+
+Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
+
 - [Node.js](https://nodejs.org/en/) (versão 18 ou superior)
-- [Mockoon](https://mockoon.com/) (Para simular a API do back-end)
+- [Mockoon](https://mockoon.com/) (para simulação da API local)
+- Git (opcional, para clonar o repositório)
 
 ---
 
-## 🚀 Como instalar e rodar o Front-End
+## 🚀 Como instalar e executar o Front-End
 
-1. *Abra o terminal na pasta do projeto* e instale as dependências:
-   ```bash
-   npm install
-Configure as Variáveis de Ambiente:
+### 1. Instale as dependências
 
-Na raiz do projeto, localize o arquivo .env.example.
+Abra o terminal na pasta do projeto e execute:
 
-Crie uma cópia dele ou renomeie-o para .env.
+```bash
+npm install
+```
 
-Certifique-se de que a URL da API está configurada corretamente:
+### 2. Configure as variáveis de ambiente
 
-Code snippet
+Na raiz do projeto, localize o arquivo `.env.example`.
+
+Crie uma cópia chamada `.env`:
+
+```bash
+cp .env.example .env
+```
+
+> **Windows:** você também pode criar manualmente um arquivo `.env` na raiz do projeto, copiando o conteúdo do `.env.example`.
+
+Verifique se a URL da API está configurada corretamente:
+
+```env
 VITE_API_URL=http://localhost:3000
-Inicie o servidor de desenvolvimento:
+```
 
-Bash
+> A URL deve corresponder à porta configurada no Mockoon.
+
+### 3. Inicie o servidor de desenvolvimento
+
+Execute o comando:
+
+```bash
 npm run dev
-Acesse o projeto no navegador através do link fornecido no terminal (geralmente http://localhost:5173).
+```
 
-🔌 Como conectar e rodar a API (Mockoon)
-Para que os produtos sejam carregados dinamicamente, o projeto consome uma API simulada no Mockoon. Deixei o ambiente totalmente configurado para facilitar os testes!
+Após iniciar, acesse o endereço exibido no terminal.
 
-Abra o aplicativo Mockoon.
+Por padrão, o Vite disponibiliza a aplicação em:
 
-No menu superior, vá em File > Import/export > Import environment from file.
+[http://localhost:5173](http://localhost:5173)
 
-Selecione o arquivo mockoon-environment.json que está na raiz deste projeto.
+---
 
-O ambiente "Glow & Co. Api" vai aparecer na barra lateral.
+## 🔌 Como configurar e executar a API com Mockoon
 
-Clique no botão verde de Play (▶️) no topo esquerdo do Mockoon para iniciar o servidor na porta 3000.
+O projeto utiliza o **Mockoon** para simular uma API local responsável por fornecer os dados dos produtos.
+
+O ambiente da API já está configurado no arquivo `mockoon-environment.json`, disponível na raiz do projeto.
+
+### 1. Abra o Mockoon
+
+Inicie o aplicativo [Mockoon](https://mockoon.com/) instalado em sua máquina.
+
+### 2. Importe o ambiente da API
+
+No menu superior, acesse:
+
+**File → Import/export → Import environment from file**
+
+Selecione o arquivo:
+
+```text
+mockoon-environment.json
+```
+
+Após a importação, o ambiente **Glow & Co. API** estará disponível na barra lateral do Mockoon.
+
+### 3. Inicie o servidor
+
+1. Selecione o ambiente **Glow & Co. API**.
+2. Verifique se a porta está configurada como `3000`.
+3. Clique no botão verde de **Play (▶️)** no canto superior esquerdo.
+
+A API estará disponível em:
+
+```text
+http://localhost:3000
+```
+
+### 4. Verifique o endpoint de produtos
+
+Com o servidor em execução, a aplicação poderá consumir os produtos por meio do endpoint configurado no ambiente.
+
+Exemplo:
+
+```text
+GET http://localhost:3000/products
+```
+
+> Certifique-se de que o Mockoon esteja em execução antes de acessar a aplicação, para que os produtos sejam carregados corretamente.
