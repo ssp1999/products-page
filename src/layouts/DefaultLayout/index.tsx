@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 
 const DefaultLayout = () => {
   return (
     <div>
-      {/* add header */}
+      <Header cartCount={0} />
+
       <main>
         <Outlet />
       </main>
-      {/* add footer */}
+
+      <Footer />
     </div>
   )
 }
