@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import DefaultLayout from "./layouts/DefaultLayout"
-import Products from "./pages/Products/components/Product"
+import Products from "./pages/Products"
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
