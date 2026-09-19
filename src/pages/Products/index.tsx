@@ -1,6 +1,12 @@
+import { useOutletContext } from "react-router-dom"
 import Product from "./components/Product"
 
+interface CartContext {
+  handleAddToCart: () => void
+}
+
 const Products = () => {
+  const { handleAddToCart } = useOutletContext<CartContext>()
   const PRODUCTS = [
     {
       id: 1,
@@ -74,7 +80,7 @@ const Products = () => {
           <Product
             key={product.id}
             product={product}
-            onAddToCart={() => { }}
+            onAddToCart={handleAddToCart}
           />
         ))}
       </div>

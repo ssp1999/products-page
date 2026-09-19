@@ -13,7 +13,7 @@ interface IProduct {
 
 interface ProductProps {
   product: IProduct
-  onAddToCart: (product: IProduct) => void
+  onAddToCart: () => void
 }
 
 const Product = ({ product, onAddToCart }: ProductProps) => {
@@ -25,7 +25,6 @@ const Product = ({ product, onAddToCart }: ProductProps) => {
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        {/* Badges */}
         {product.isNew && (
           <span className="absolute top-3 left-3 bg-white/90 text-rose-600 text-xs font-bold px-2 py-1 rounded-lg backdrop-blur-sm shadow-sm">
             Novo
@@ -53,7 +52,7 @@ const Product = ({ product, onAddToCart }: ProductProps) => {
           </span>
         </div>
         <button
-          onClick={() => onAddToCart(product)}
+          onClick={() => onAddToCart()}
           className="bg-rose-50 text-rose-600 p-2.5 rounded-full hover:bg-rose-500 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 shadow-sm"
           aria-label={`Adicionar ${product.name} ao carrinho`}
         >
