@@ -21,7 +21,13 @@ const About = () => {
             <li className="flex items-center gap-3">
               <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
               <span className="text-gray-800">
-                <strong>Disciplina:</strong> Desenvolvimento Front End 1
+                <strong>Disciplina:</strong> Desenvolvimento Front End 2
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
+              <span className="text-gray-800">
+                <strong>Professor:</strong> Thiago Magno Santos Furtado
               </span>
             </li>
           </ul>

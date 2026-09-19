@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router-dom"
 import Product from "./components/Product"
 import { useEffect, useState } from "react"
 import type { IProduct } from "../../types/product"
+import { API_URL } from "../../services/api"
 
 interface CartContext {
   handleAddToCart: () => void
@@ -12,7 +13,7 @@ const Products = () => {
   const [products, setProducts] = useState<IProduct[]>([])
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch(`${API_URL}/products`)
       .then(response => response.json())
       .then(data => {
         setProducts(data)
