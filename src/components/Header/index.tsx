@@ -1,4 +1,5 @@
 import { Sparkles, ShoppingBag } from "lucide-react"
+import { NavLink } from "react-router-dom"
 
 interface HeaderProps {
   cartCount: number
@@ -19,9 +20,25 @@ const Header = ({ cartCount }: HeaderProps) => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="text-gray-600 hover:text-rose-600 transition-colors font-medium">Início</a>
-            <a href="#" className="text-rose-600 font-medium">Produtos</a>
-            <a href="#" className="text-gray-600 hover:text-rose-600 transition-colors font-medium">Sobre</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `font-medium transition-colors ${isActive ? 'text-rose-600' : 'text-gray-600 hover:text-rose-600'
+                }`
+              }
+            >
+              Produtos
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `font-medium transition-colors ${isActive ? 'text-rose-600' : 'text-gray-600 hover:text-rose-600'
+                }`
+              }
+            >
+              Sobre
+            </NavLink>
           </div>
 
           {/* Cart Area */}
