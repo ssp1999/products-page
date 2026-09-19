@@ -16,13 +16,11 @@ A aplicação apresenta uma interface moderna e responsiva, com componentizaçã
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-
-**React** 
-**Vite**
-**JavaScript / TypeScript**
-**Tailwind CSS**
-**React Router DOM**
-**Mockoon**
+- *React* (com Vite)
+- *TypeScript* / *JavaScript*
+- *Tailwind CSS* (Estilização)
+- *React Router DOM* (Navegação SPA)
+- *Mockoon* (Mock de API Local)
 
 ---
 
