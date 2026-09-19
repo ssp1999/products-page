@@ -94,7 +94,7 @@ Inicie o aplicativo [Mockoon](https://mockoon.com/) instalado em sua máquina.
 
 No menu superior, acesse:
 
-**File → Import/export → Import environment from file**
+**File → Open Local Environment**
 
 Selecione o arquivo:
 
